@@ -1,0 +1,4 @@
+# file yang perlu diabaikan oleh Git
+.env
+node_modules/
+.DS_Store
