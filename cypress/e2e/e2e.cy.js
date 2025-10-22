@@ -1,12 +1,12 @@
-const HomePageAgoda = require('./support/page-object/Agoda/homepage')
-const FlightList = require('./support/page-object/Agoda/flightlist');
-const DataPassenger = require('./support/page-object/Agoda/datapassenger');
+const HomePageAgoda = require('../support/page-object/Agoda/homepage')
+const FlightList = require('../support/page-object/Agoda/flightlist');
+const DataPassenger = require('../support/page-object/Agoda/datapassenger');
 
-const HomePageAmazon = require('./support/page-object/Amazon/homepage');
-const ListProduct = require('./support/page-object/Amazon/listproduct');
+const HomePageAmazon = require('../support/page-object/Amazon/homepage');
+const ListProduct = require('../support/page-object/Amazon/listproduct');
 
-const HomePage = require('./support/page-object/Youtube/homepage');
-const Trending = require('./support/page-object/Youtube/trending');
+const HomePage = require('../support/page-object/Youtube/homepage');
+const Trending = require('../support/page-object/Youtube/trending');
 
 cy.on('uncaught:exception', (err, runnable) => {
     return false;
