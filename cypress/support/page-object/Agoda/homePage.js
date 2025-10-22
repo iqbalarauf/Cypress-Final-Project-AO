@@ -4,7 +4,6 @@ const dataExample = require('../../../fixtures/example.json');
 class HomePageAgoda {
     visit() {
         // Visit the Agoda homepage
-        cy.viewport(1920, 1080);
         cy.visit(Cypress.env('BASE_URL_AGODA'));
         // Wait for the page to load
         cy.wait(1000);
