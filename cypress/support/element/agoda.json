@@ -1,4 +1,4 @@
-{
+{   
     "flightTab" : "//li[@id='tab-flight-tab']",
     "flightOriginInput" : "//input[@id='flight-origin-search-input']",
     "flightDestinationInput" : "//input[@id='flight-destination-search-input']",

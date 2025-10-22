@@ -1,6 +1,6 @@
-const HomePageAgoda = require('../support/page-object/agoda/homePage')
-const FlightList = require('../support/page-object/agoda/flightList');
-const DataPassenger = require('../support/page-object/agoda/dataPassenger');
+const HomePageAgoda = require('../support/page-object/Agoda/homepage')
+const FlightList = require('../support/page-object/Agoda/flightlist');
+const DataPassenger = require('../support/page-object/Agoda/datapassenger');
 
 describe('E2E', function () {
     it('Memesan Tiket Penerbangan', function () {

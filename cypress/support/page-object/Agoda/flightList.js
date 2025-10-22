@@ -30,48 +30,6 @@ class FlightList {
                                 cy.wrap(arrivalTime.trim()).as('arrivalTime');
                             });
                     })
-            } else if ($body.text().includes('Batik Air (Malaysia)')) {
-                // Batik Air (Malaysia) tidak ditemukan, cek Batik Air (Malaysia)
-                cy.xpath(dataFlight).contains('Batik Air (Malaysia)').first().click();
-                cy.wait(2000);
-                cy.xpath(dataFlight)
-                    .contains('Batik Air (Malaysia)')
-                    .first()
-                    .within(() => {
-                        cy.xpath(`//div[@data-testid='departure-time']//p`)
-                            .first()
-                            .invoke('text')
-                            .then((departureTime) => {
-                                cy.wrap(departureTime.trim()).as('departureTime');
-                            });
-                        cy.xpath(`//div[@data-testid='departure-time']//p`)
-                            .last()
-                            .invoke('text')
-                            .then((arrivalTime) => {
-                                cy.wrap(arrivalTime.trim()).as('arrivalTime');
-                            });
-                    })
-            } else if ($body.text().includes('Jetstar Asia')) {
-                // Jika keduanya tidak ada, cek Jetstar Asia
-                cy.xpath(dataFlight).contains('Jetstar Asia').first().click();
-                cy.wait(2000);
-                cy.xpath(dataFlight)
-                    .contains('Jetstar Asia')
-                    .first()
-                    .within(() => {
-                        cy.xpath(`//div[@data-testid='departure-time']//p`)
-                            .first()
-                            .invoke('text')
-                            .then((departureTime) => {
-                                cy.wrap(departureTime.trim()).as('departureTime');
-                            });
-                        cy.xpath(`//div[@data-testid='departure-time']//p`)
-                            .last()
-                            .invoke('text')
-                            .then((arrivalTime) => {
-                                cy.wrap(arrivalTime.trim()).as('arrivalTime');
-                            });
-                    })
             } else {
                 // Semua maskapai tidak tersedia
                 cy.log('Tidak ada maskapai yang tersedia dari daftar.');

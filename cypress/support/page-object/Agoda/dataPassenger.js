@@ -3,17 +3,17 @@ const element = require('../../element/agoda.json');
 class DataPassanger {
     fillPassengerDetails() {
         // Fill in passenger details
-        cy.xpath(element.contactFirstName).type('John');
+        cy.xpath(element.contactFirstName).type('Gita');
         cy.wait(1000);
-        cy.xpath(element.contactLastName).type('Doe');
+        cy.xpath(element.contactLastName).type('Sekar');
         cy.wait(1000);
-        cy.xpath(element.contactEmail).type('johndoe12@mail.com');
+        cy.xpath(element.contactEmail).type('gitasekar7@mail.com');
         cy.wait(1000);
         cy.xpath(element.contactPhoneNumber).type('8123456789');
         cy.wait(1000);
         cy.xpath(element.passenggerGender).first().check().click()
         cy.xpath(element.passengerFirstName)
-            .type('John')
+            .type('Gita')
             .within(() => {
                 cy.xpath(`//input[@id='contact.contactFirstName']`)
                     .invoke('val').then((firstName) => {
@@ -22,7 +22,7 @@ class DataPassanger {
             })
         cy.wait(1000);
         cy.xpath(element.passengerLastName)
-            .type('Doe')
+            .type('Sekar')
             .within(() => {
                 cy.xpath(`//input[@id='contact.contactLastName']`)
                     .invoke('val').then((lastName) => {
@@ -30,7 +30,7 @@ class DataPassanger {
                     })
             })
         cy.wait(1000);
-        cy.xpath(element.passengerBirthDate).type('10');
+        cy.xpath(element.passengerBirthDate).type('6');
         cy.wait(1000);
         cy.xpath(element.passengerBirthMonth).eq(2).click();
         cy.wait(1000);

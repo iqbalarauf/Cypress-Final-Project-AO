@@ -1,4 +1,5 @@
 const element = require('../../element/agoda.json');
+const dataExample = require('../../../fixtures/example.json');
 
 class HomePageAgoda {
     visit() {
@@ -9,8 +10,8 @@ class HomePageAgoda {
         cy.wait(1000);
     }
     selectFlightTab(
-        inputOrigin = Cypress.env('AGODA_FLIGHT_ORIGIN'),
-        inputDestination = Cypress.env('AGODA_FLIGHT_DESTINATION')
+        inputOrigin = dataExample.origincity,
+        inputDestination = dataExample.destinationcity
     ) {
         // Click on the Flight tab
         cy.xpath(element.flightTab).click();

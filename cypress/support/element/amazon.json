@@ -1,0 +1,6 @@
+{
+    "searchInput": "//input[@id='twotabsearchtextbox']",
+    "sortDropdown": "//span[@data-action='a-dropdown-button']",
+    "sortOption": "//li[@role='option']",
+    "selectProduct5": "//div[@role='listitem'][5]"
+}

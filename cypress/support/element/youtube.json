@@ -1,0 +1,6 @@
+{
+        "guideButton" : "//button[@aria-label='Guide']",
+        "trendingTab" : "//div[@id='items']",
+        "moviesTab" : "//div[@role='tablist']",
+        "trendingMovies" : "//div[@id='grid-container']/descendant::ytd-video-renderer[3]"
+}
