@@ -5,7 +5,7 @@ class HomePage {
         cy.visit(Cypress.env('BASE_URL_YOUTUBE'));
     }
 
-    trendingSection() {
+    sidebarPage() {
         cy.xpath(element.guideButton).click();
         cy.xpath(element.moviesTab).contains('Game').click();
     }

@@ -5,7 +5,13 @@ class FlightList {
         // Click on the sort options
         cy.xpath(element.sortByButton).click();
         cy.wait(2000);
-        cy.xpath(element.sortByOptions).contains('Departure time').click();
+        cy.xpath(element.sortByOptions)
+            .filter((index, el) => {
+                const text = Cypress.$(el).text();
+                return text.includes('Departure time') || text.includes('Waktu keberangkatan');
+            })
+            .first()
+            .click();
         cy.wait(2000);
         cy.get('body').then(($body) => {
             let dataFlight = `//div[@data-testid='flightCard-flight-detail']`

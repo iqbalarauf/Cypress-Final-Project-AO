@@ -4,12 +4,15 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 module.exports = defineConfig({
-  reporter: "mochawesome",
-  reporterOptions: {
+  reporter: "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
     charts: true,
-    reportPageTitle: 'My Test Report',
     embeddedScreenshots: true,
     inlineAssets: true,
+    "overwrite": false,
+    "html": true,
+    "json": true
   },
   e2e: {
     env: {
